@@ -11,6 +11,7 @@ starting with you guessing the computer’s random code.</p>
 
 <p>Build the game assuming the computer randomly selects the secret colors and the human player must guess them. 
 Remember that you need to give the proper feedback on how good the guess was each turn!</p>
+
 <p>
 Now refactor your code to allow the human player to choose whether he/she wants to be the creator of the secret code or the guesser.</p>
 
