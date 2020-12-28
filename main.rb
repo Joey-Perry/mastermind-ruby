@@ -16,4 +16,21 @@
 #needed objects: codemaker (creates secret code), codebreaker (human player), game (manages the flow)
 #codemaker : create secret code, determines how close the guesses are to the secret code
 #codebreaker : keeps track of tuns
-#game : 
+#game
+
+require_relative 'game.rb'
+require_relative 'user_is_codemaker.rb'
+
+puts "Welcome to Mastermind Ruby"
+puts "Are the codemaker or the codebreaker?"
+
+user_response = gets.chomp
+
+if user_response == 'codebreaker'
+    new_game = Game.new
+    p new_game.codemaker.secret_code
+    new_game.game_loop
+else
+    computer_guess = UserIsCodemaker.new
+    computer_guess.game
+end

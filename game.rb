@@ -46,7 +46,7 @@ class Game
         puts "Warm: #{warm}"
     end
 
-    def user_is_codebreaker_game_loop
+    def game_loop
         # obtain user guess
         user_guess = receive_guess
         # compare guess to secret code
@@ -66,17 +66,4 @@ class Game
             end
         end
     end
-
-    def user_is_codemaker_game_loop
-        puts "Create your code: "
-        user_secret_code = gets.chomp.split(",").map { |color| color.strip}
-        computer_generate_guess
-        compare_computer_guess_to_user_code
-        display_feedback #then go back to computer_generate_guess
-    end
 end
-
-new_game = Game.new
-puts "Enter guess"
-p new_game.codemaker.secret_code
-new_game.user_is_codebreaker_game_loop
